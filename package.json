@@ -1,0 +1,63 @@
+{
+  "name": "@chikore/directus-authprovider",
+  "version": "1.0.0",
+  "description": "Directus REST data provider",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "module": "dist/refine-directus.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/refine-directus.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/refine-directus.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "private": false,
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch --tsconfig tsconfig.json --verbose --noClean",
+    "build": "tsdx build --tsconfig tsconfig.json",
+    "test": "tsdx test --passWithNoTests --runInBand",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chokri/directus-authprovider.git"
+  },
+  "keywords": [
+    "Authprovider"
+  ],
+  "author": "Chokri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chokri/directus-authprovider/issues"
+  },
+  "homepage": "https://github.com/chokri/directus-authprovider#readme",
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^8.2.4",
+    "nock": "^13.1.3",
+    "size-limit": "^5.0.5",
+    "tsdx": "^0.13.3",
+    "tslib": "^2.3.1"
+  },
+  "dependencies": {
+    "@directus/sdk": "^10.3.1",
+    "@pankod/refine-core": "^3.99.4",
+    "@types/react": "^18.0.0"
+  }
+}
